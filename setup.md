@@ -11,7 +11,7 @@ On Windows, start a CMD shell or open a terminal window in your favorite MacOS, 
 In the terminal, clone the class repo using the following command:
 
 ```
-git clone https://github.com/jdhughes-usgs/modflow-dsd24.git
+git clone https://github.com/mjr-deltares/modflow-dsd25.git
 ```
 
 In case you do not have `git` installed (yet), you can find instructions how to do this [here](https://git-scm.com/downloads). Alternatively, you can download the zip archive from the repository at the following location:
