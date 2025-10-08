@@ -22,14 +22,17 @@ and unzip and rename the folder to modflow-dsd25 and continue with the next step
 
 ## 2. Setting up MODFLOW 6 and pixi environment
 
-In order to set up MODFLOW 6, install the latest version of pixi:
+In order to set up MODFLOW 6, install the latest version of pixi. Instructions to get the Windows installer (or Powershell command) can be found at [https://pixi.sh/dev/installation/](https://pixi.sh/dev/installation/), for Linux and MacOS you can simply do:
 
 ```
 curl -fsSL https://pixi.sh/install.sh | bash
 ```
 
-and make sure to restart your shell. (In case you already have pixi on your system, update to the latest version by doing `pixi self-update`)
-Additional information on installing pixi is available at [https://pixi.sh/dev/](https://pixi.sh/dev/). 
+and make sure to restart your shell. In case you already have pixi on your system, update to the latest version by doing: 
+
+```
+pixi self-update
+```
 
 Next execute:
 
