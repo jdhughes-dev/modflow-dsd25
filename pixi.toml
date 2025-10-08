@@ -36,13 +36,12 @@ jupyter = { cmd = "jupyter lab" }
 
 [target.win-64.tasks]
 clone-modflow-win = { cmd = "rm -rf modflow6; git clone https://github.com/MODFLOW-USGS/modflow6.git" }
-update-flopy-win = { cmd = "python update_flopy.py", cwd = "modflow6/autotest" }
-download-modflow-win = { cmd = "python -c 'from urllib.request import urlretrieve; urlretrieve(\"https://github.com/MODFLOW-USGS/modflow6-nightly-build/releases/download/20241120/win64ext.zip\", \"win64ext.zip\")'" , outputs=["win64ext.zip"]}
+download-modflow-win = { cmd = "python -c 'from urllib.request import urlretrieve; urlretrieve(\"https://github.com/MODFLOW-USGS/modflow6-nightly-build/releases/download/20251007/win64ext.zip\", \"win64ext.zip\")'" , outputs=["win64ext.zip"]}
 unzip-modflow-win = { cmd = "python -c 'import shutil; shutil.unpack_archive(\"win64ext.zip\", \"win64ext\")'" }
 install-modflow-win = {cmd = "python -c 'import shutil; import glob; shutil.copytree(glob.glob(\"win64ext/**/bin\")[0], \".pixi/envs/default/bin\", dirs_exist_ok=True)'" }
 obtain-modflow = { depends-on = [
   "clone-modflow-win",
-  "update-flopy-win",
+  "update-flopy",
   "download-modflow-win",
   "unzip-modflow-win",
   "install-modflow-win",
