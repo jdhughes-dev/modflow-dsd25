@@ -12,7 +12,7 @@ install-flopy = "pip install https://github.com/modflowpy/flopy/zipball/develop"
 update-pc-files = { cmd = "python update_pc_files.py", cwd = "installation" }
 clone-modflow = "rm -rf modflow6/ && git clone https://github.com/MODFLOW-USGS/modflow6.git"
 update-flopy = { cmd = "python -m flopy.mf6.utils.generate_classes --dfnpath modflow6/doc/mf6io/mf6ivar/dfn" }
-setup-modflow = { cmd = "echo $PKG_CONFIG_PATH && rm -rf builddir && meson setup builddir -Ddebug=false -Dextended=true --prefix=$PIXI_PROJECT_ROOT/.pixi/envs/default/", cwd = "modflow6" }
+setup-modflow = { cmd = "PKG_CONFIG_PATH=$PIXI_PROJECT_ROOT/.pixi/envs/default/lib/pkgconfig && rm -rf builddir && meson setup builddir -Ddebug=false -Dextended=true --prefix=$PIXI_PROJECT_ROOT/.pixi/envs/default/", cwd = "modflow6" }
 install-modflow = { cmd = "meson install -C builddir", cwd = "modflow6" }
 test-modflow = { cmd = "meson test --verbose --no-rebuild -C builddir", cwd = "modflow6" }
 obtain-modflow = { depends-on = [
@@ -31,7 +31,8 @@ install = { depends-on = [
   "obtain-modflow",
   "test-installation",
 ] }
-jupyter = "export PATH=.pixi/envs/default/bin:.pixi/envs/default/lib:$PATH && jupyter lab"
+
+jupyter = { cmd = "jupyter lab" }
 
 [target.win-64.tasks]
 clone-modflow-win = { cmd = "rm -rf modflow6; git clone https://github.com/MODFLOW-USGS/modflow6.git" }
@@ -60,7 +61,7 @@ git = "*"
 pkg-config = "*"
 gfortran = "*"
 clang = "*"
-meson = ">=1.1.0"
+meson = ">=1.3.0"
 ninja = "*"
 pytest = "*"
 
@@ -101,22 +102,22 @@ ipywidgets = "*"
 openmpi = "*"
 libnetcdf = "*"
 netcdf-fortran = "*"
-petsc = "*"
+petsc = "<3.23"
 
 [target.linux-aarch64.dependencies]
 openmpi = "*"
 libnetcdf = "*"
 netcdf-fortran = "*"
-petsc = "*"
+petsc = "<3.23"
 
 [target.osx-64.dependencies]
 openmpi = "*"
 libnetcdf = "*"
 netcdf-fortran = "*"
-petsc = "*"
+petsc = "<3.23"
 
 [target.osx-arm64.dependencies]
 openmpi = "*"
 libnetcdf = "*"
 netcdf-fortran = "*"
-petsc = "*"
+petsc = "<3.23"
