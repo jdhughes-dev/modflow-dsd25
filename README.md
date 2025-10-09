@@ -21,4 +21,4 @@ Instructions for setting up the class environment is provided in [setup.md](./se
 * 15:30 to 15:50 &mdash; **COFFEE BREAK**
 * 15:50 to 16:50 &mdash; In-depth Numerical Solution: solver settings, diagnostics, best practices (JH/MR)
 * 16:50 to 17:00 &mdash; Closing (MR)
-* **DRINKS** &mdash; 17:00 to 18:00
+* 17:00 to 18:00 &mdash; **DRINKS**
