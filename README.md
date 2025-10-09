@@ -8,12 +8,17 @@ Instructions for setting up the class environment is provided in [setup.md](./se
 
 # Agenda
 
-* **ARRIVAL** &mdash; 08:30 to 09:00
-* Welcome and Introductions &mdash; 09:00 to 09:10
-* Overview of MODFLOW 6 &mdash; 09:10 to 09:30
-* Brief introduction to FloPy and pixi &mdash; 09:30 to 10:15
-* **COFFEE BREAK** &mdash; ? to ?
-* **GROUP PICTURE** &mdash; ? to ?
-* **LUNCH BREAK** &mdash; 13:00 to 14:00
-* **COFFEE BREAK** &mdash; ? to ?
+* 08:30 to 09:00 &mdash; **ARRIVAL** 
+* 09:00 to 09:10 &mdash; Welcome and Introductions (MR)
+* 09:10 to 09:40 &mdash; Overview of MODFLOW 6, newest capabilities, and ongoing developments (MR/CL)
+* 09:40 to 10:40 &mdash; Brief introduction to FloPy and pixi, installation of the class environment (JH/MR)
+* 10:40 to 11:00 &mdash; **COFFEE BREAK**
+* 11:00 to 12:30 &mdash; In-depth density driven flow, adaptive timestepping, advection schemes, SWI (CL/ST)
+* 12:30 to 12:55 &mdash; Highlights: new and advanced features such as PRT, NetCDF, gridded input, ... (MR/CL)
+* 12.55 to 13.00 &mdash; **GROUP PICTURE**
+* 13:00 to 14:00 &mdash; **LUNCH BREAK**
+* 14:00 to 15:30 &mdash; Aquifer Thermal Energy Storage (ATES/WKO) example using GWE (MB)
+* 15:30 to 15:50 &mdash; **COFFEE BREAK**
+* 15:50 to 16:50 &mdash; In-depth Numerical Solution: solver settings, diagnostics, best practices (JH/MR)
+* 16:50 to 17:00 &mdash; Closing (MR)
 * **DRINKS** &mdash; 17:00 to 18:00
