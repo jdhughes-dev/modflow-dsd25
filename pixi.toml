@@ -8,17 +8,18 @@ platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64", "win-64"]
 linux = "4.4.0"
 
 [tasks]
-install-flopy = "pip install https://github.com/modflowpy/flopy/zipball/develop"
 update-pc-files = { cmd = "python update_pc_files.py", cwd = "installation" }
 clone-modflow = "rm -rf modflow6/ && git clone https://github.com/MODFLOW-USGS/modflow6.git"
-update-flopy = { cmd = "python -m flopy.mf6.utils.generate_classes --dfnpath modflow6/doc/mf6io/mf6ivar/dfn" }
+update-dependencies = "pixi update flopy modflow-devtools"
+update-flopy-dfn = { cmd = "python -m flopy.mf6.utils.generate_classes --dfnpath modflow6/doc/mf6io/mf6ivar/dfn" }
 setup-modflow = { cmd = "PKG_CONFIG_PATH=$PIXI_PROJECT_ROOT/.pixi/envs/default/lib/pkgconfig && rm -rf builddir && meson setup builddir -Ddebug=false -Dextended=true --prefix=$PIXI_PROJECT_ROOT/.pixi/envs/default/", cwd = "modflow6" }
 install-modflow = { cmd = "meson install -C builddir", cwd = "modflow6" }
 test-modflow = { cmd = "meson test --verbose --no-rebuild -C builddir", cwd = "modflow6" }
 obtain-modflow = { depends-on = [
   "update-pc-files",
   "clone-modflow",
-  "update-flopy",
+  "update-dependencies",
+  "update-flopy-dfn",
   "setup-modflow",
   "install-modflow",
   "test-modflow",
@@ -27,7 +28,6 @@ obtain-modflow = { depends-on = [
 test-installation = { cmd = "python test_installation.py", cwd = "installation" }
 
 install = { depends-on = [
-  "install-flopy",
   "obtain-modflow",
   "test-installation",
 ] }
@@ -41,7 +41,8 @@ unzip-modflow-win = { cmd = "python -c 'import shutil; shutil.unpack_archive(\"w
 install-modflow-win = {cmd = "python -c 'import shutil; import glob; shutil.copytree(glob.glob(\"win64ext/**/bin\")[0], \".pixi/envs/default/bin\", dirs_exist_ok=True)'" }
 obtain-modflow = { depends-on = [
   "clone-modflow-win",
-  "update-flopy",
+  "update-dependencies",
+  "update-flopy-dfn",
   "download-modflow-win",
   "unzip-modflow-win",
   "install-modflow-win",
@@ -64,38 +65,16 @@ meson = ">=1.3.0"
 ninja = "*"
 pytest = "*"
 
-# devtools
-modflow-devtools = "==1.7.0"
-tomli = "*"
-tomli-w = "*"
-boltons = "*"
-
-# flopy
-python-dateutil = ">=2.4.0"
-affine = "*"
-scipy = "*"
-pandas = ">=2.2.0"
-pyshp = "*"
-rasterio = "*"
-fiona = "*"
-descartes = "*"
-pyproj = "*"
-shapely = ">=1.8"
-geos = "*"
-geojson = "*"
-vtk = "*"
-rasterstats = "*"
-pyvista = "*"
-imageio = "*"
-pymetis = "*"
-netcdf4 = "*"
-xarray = "*"
-xmipy = "*"
-modflowapi = "*"
-
 # notebooks
 xugrid = "*"
 ipywidgets = "*"
+
+# flopy
+pymetis = "*"
+
+[pypi-dependencies]
+flopy = { git = "https://github.com/modflowpy/flopy.git" }
+modflow-devtools = { git = "https://github.com/MODFLOW-ORG/modflow-devtools.git", extras = ["dfn"] }
 
 [target.linux-64.dependencies]
 openmpi = "*"
