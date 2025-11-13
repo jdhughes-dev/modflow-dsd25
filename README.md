@@ -16,10 +16,10 @@ Instructions for setting up the class environment is provided in [setup.md](./se
 * 11:00 to 12:30 &mdash; In-depth density driven flow, adaptive timestepping, advection schemes, SWI (CL/ST)
 * 12.25 to 12.30 &mdash; **GROUP PICTURE**
 * 12:30 to 13:30 &mdash; **LUNCH BREAK**
-* 13:30 to 14:00 &mdash; Highlights: new, advanced, and experimental features such as FloPy4, PRT, NetCDF, gridded input, ... (MR/all)
+* 13:30 to 14:00 &mdash; Highlights: new, advanced, and experimental features such as FloPy4, PRT, NetCDF, gridded input, ... (JH/MR)
 * 14:00 to 15:00 &mdash; Aquifer Thermal Energy Storage (ATES/WKO) example using GWE, Part I (MB)
 * 15:00 to 15:20 &mdash; **COFFEE BREAK**
 * 15:20 to 15:50 &mdash; Aquifer Thermal Energy Storage (ATES/WKO) example using GWE, Part II (MB)
-* 15:50 to 16:50 &mdash; In-depth Numerical Solution: solver settings, diagnostics, best practices (JH/MR)
+* 15:50 to 16:50 &mdash; In-depth Numerical Solution: solver settings, diagnostics, best practices (MR/JH)
 * 16:50 to 17:00 &mdash; Closing (MR)
 * 17:00 to 18:00 &mdash; **DRINKS**
