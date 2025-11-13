@@ -14,11 +14,12 @@ Instructions for setting up the class environment is provided in [setup.md](./se
 * 09:40 to 10:40 &mdash; Brief introduction to FloPy and pixi, installation of the class environment (JH/MR)
 * 10:40 to 11:00 &mdash; **COFFEE BREAK**
 * 11:00 to 12:30 &mdash; In-depth density driven flow, adaptive timestepping, advection schemes, SWI (CL/ST)
-* 12:30 to 12:55 &mdash; Highlights: new and advanced features such as PRT, NetCDF, gridded input, ... (MR/CL)
-* 12.55 to 13.00 &mdash; **GROUP PICTURE**
-* 13:00 to 14:00 &mdash; **LUNCH BREAK**
-* 14:00 to 15:30 &mdash; Aquifer Thermal Energy Storage (ATES/WKO) example using GWE (MB)
-* 15:30 to 15:50 &mdash; **COFFEE BREAK**
+* 12.25 to 12.30 &mdash; **GROUP PICTURE**
+* 12:30 to 13:30 &mdash; **LUNCH BREAK**
+* 13:30 to 14:00 &mdash; Highlights: new, advanced, and experimental features such as FloPy4, PRT, NetCDF, gridded input, ... (MR/all)
+* 14:00 to 15:00 &mdash; Aquifer Thermal Energy Storage (ATES/WKO) example using GWE, Part I (MB)
+* 15:00 to 15:20 &mdash; **COFFEE BREAK**
+* 15:20 to 15:50 &mdash; Aquifer Thermal Energy Storage (ATES/WKO) example using GWE, Part II (MB)
 * 15:50 to 16:50 &mdash; In-depth Numerical Solution: solver settings, diagnostics, best practices (JH/MR)
 * 16:50 to 17:00 &mdash; Closing (MR)
 * 17:00 to 18:00 &mdash; **DRINKS**
