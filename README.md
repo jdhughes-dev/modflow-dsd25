@@ -13,7 +13,7 @@ Instructions for setting up the class environment is provided in [setup.md](./se
 * 09:10 to 09:40 &mdash; Overview of MODFLOW 6, newest capabilities, and ongoing developments (MR/CL)
 * 09:40 to 10:40 &mdash; Brief introduction to FloPy and pixi, installation of the class environment (JH/MR)
 * 10:40 to 11:00 &mdash; **COFFEE BREAK**
-* 11:00 to 12:25 &mdash; In-depth density driven flow, adaptive timestepping, advection schemes, SWI (CL/ST)
+* 11:00 to 12:25 &mdash; In-depth density driven flow, adaptive time stepping, advection schemes, SWI (CL/ST)
 * 12.25 to 12.30 &mdash; **GROUP PICTURE**
 * 12:30 to 13:30 &mdash; **LUNCH BREAK**
 * 13:30 to 14:00 &mdash; Highlights: new, advanced, and experimental features such as FloPy4, PRT, NetCDF, gridded input, ... (JH/MR)
